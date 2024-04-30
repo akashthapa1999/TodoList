@@ -1,0 +1,35 @@
+
+
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Todo</title>
+
+</head>
+<body>
+    <div class = "container">
+        <h1>Update Data</h1>
+        <div class = "table">
+
+            <form action = "" method = "POST">
+                {% csrf_token %}
+                
+                    {{form.as_p}}
+
+                <input type = "Submit" value = "Add" class = "btn">
+
+                <a href = "{% url 'showdata' %}">Back to home</a>
+            </form>
+
+            
+        </div> <!--Close table-->
+
+
+    </div> <!--CLose container-->
+    
+</body>
+</html>
